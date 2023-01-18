@@ -1,0 +1,2 @@
+C:\Users\Tyler\OneDrive\Documents\programming\projects\web\ShoppingList\ShoppingListClient\obj\Debug\shoppinglistclient.esproj.SuggestedBindingRedirects.cache
+C:\Users\Tyler\OneDrive\Documents\programming\projects\web\ShoppingList\ShoppingListClient\obj\Debug\shoppinglistclient.esproj.CoreCompileInputs.cache
