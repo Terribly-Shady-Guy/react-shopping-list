@@ -7,12 +7,12 @@ function NewItemForm() {
         setItemName(e.target.value);
     }
 
-    const submitName = () => {
+    const submitName = async () => {
         const reqBody = {
             itemName: itemName
         };
 
-        fetch("https://localhost:7146/api/shoppinglistitem", {
+        await fetch("https://localhost:7146/api/shoppinglistitem", {
             method: 'POST',
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(reqBody)

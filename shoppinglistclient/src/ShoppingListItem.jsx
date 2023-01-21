@@ -6,10 +6,10 @@ function ShoppingListItem({ props }) {
 
     const [pickedUpState, setPickedUpState] = useState(isPickedUp);
 
-    const changePickedUpStatus = () => {
+    const changePickedUpStatus = async () => {
         const reqBody = { id: itemId };
 
-        fetch("https://localhost:7146/api/shoppinglistitem", {
+        await fetch("https://localhost:7146/api/shoppinglistitem", {
             method: "PUT",
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(reqBody)
