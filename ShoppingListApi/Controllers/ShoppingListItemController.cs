@@ -17,7 +17,7 @@ namespace ShoppingListApi.Controllers
         }
 
         [HttpGet]
-        public async Task<List<ShoppingListItem>> GetAllShoppingCartListitems()
+        public async Task<List<ShoppingListItem>> GetAllShoppingListitems()
         {
             return await _shoppingListItemRepository.GetAllShoppingListItems();
         }
