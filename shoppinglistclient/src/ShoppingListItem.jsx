@@ -9,19 +9,22 @@ function ShoppingListItem({ props }) {
     const changePickedUpStatus = async () => {
         const reqBody = { id: itemId };
 
-        await fetch("https://localhost:7146/api/shoppinglistitem", {
+        const response = await fetch("https://localhost:7146/api/shoppinglistitem", {
             method: "PUT",
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(reqBody)
         });
 
-        setPickedUpState(!pickedUpState);
+        if (response.status === 204) {
+            setPickedUpState(!pickedUpState);
+        }
     };
+
+    let pickedUpClass = pickedUpState ? "picked-up" : "not-picked-up";
 
     return (
         <>
-            <p className={pickedUpState ? "picked-up" : "not-picked-up"}>{itemName}</p>
-            <button type="button" onClick={changePickedUpStatus}>Check Off</button>
+            <button type="button" className={pickedUpClass + " item"} onClick={changePickedUpStatus}>{itemName}</button>
         </>
     );
 }

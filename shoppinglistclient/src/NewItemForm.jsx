@@ -12,13 +12,15 @@ function NewItemForm() {
             itemName: itemName
         };
 
-        await fetch("https://localhost:7146/api/shoppinglistitem", {
+        const response = await fetch("https://localhost:7146/api/shoppinglistitem", {
             method: 'POST',
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(reqBody)
         });
 
-        setItemName("");
+        if (response.status === 201) {
+            setItemName("");
+        }
     }
 
   return (

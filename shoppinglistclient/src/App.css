@@ -10,6 +10,12 @@
     text-decoration: none;
 }
 
+.item {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
