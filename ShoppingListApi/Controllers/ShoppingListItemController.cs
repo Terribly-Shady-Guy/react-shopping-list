@@ -13,7 +13,7 @@ namespace ShoppingListApi.Controllers
 
         public ShoppingListItemController(IShoppingListItemRepository itemRepository)
         {
-            _shoppingListItemRepository= itemRepository;
+            _shoppingListItemRepository = itemRepository;
         }
 
         [HttpGet]
